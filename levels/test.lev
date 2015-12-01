@@ -1,0 +1,9 @@
+// Example syntax file
+# Format:
+; music <file> <when this song starts (measured in ticks)>
+; nextlevel <filename>
+; enemy <name> 	      <nmbr>  <time> <intrvl>  <posX> <posY> [options]
+
+powerup	TriggeredMine	2		1		50		100		50
+
+nextlevel level1.lev

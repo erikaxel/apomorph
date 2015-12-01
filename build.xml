@@ -1,0 +1,76 @@
+<project name="Apomorph" default="compile" basedir=".">
+   <description>
+       Et lite skytespill
+   </description>
+
+   <property name="src" location="."/>
+   <property name="build" location="./build"/>
+   <property name="javadoc" location="./javadoc"/>
+   <property name="attic" location="attic/*"/>
+   <property name="studjavadoc" location="/home/groups/apo/public_html/javadoc"/>
+   <property name="img" location="./img"/>
+   <property name="sound" location="./sound"/>
+
+   <target name="init">
+      <tstamp/>
+   </target>
+
+   <target name="compile" depends="init" description="generate class files">
+      <javac srcdir="${src}" destdir="${build}" excludes="${attic}"/>
+   </target>
+
+    <target name="javadoc" depends="init" description="genereate javadoc">
+        <javadoc
+	        destdir="${javadoc}"
+	        author="true"
+                version="true"
+        	use="true"
+                windowTitle="Apo API">
+
+	        <fileset dir="${src}">
+                <include name="**/*.java"/>
+		        <exclude name="**/attic/*.java"/>
+	        </fileset>
+        </javadoc>
+    </target>
+
+    <target name="studjavadoc" depends="init" description="generate javadoc for stud">
+        <javadoc
+	        destdir="${studjavadoc}"
+	        author="true"
+                version="true"
+        	use="true"
+                windowTitle="Apo API">
+
+	        <fileset dir="${src}">
+                <include name="**/*.java"/>
+		        <exclude name="**/attic/*.java"/>
+	        </fileset>
+        </javadoc>
+    </target>
+
+	<target name="jar" depends="compile" description="generate jar-file for stud">
+        <jar destfile="apo.jar" manifest="main.txt" >
+            <fileset dir="${build}">
+				<include name="*.class"/>
+			</fileset>
+			<fileset dir="${src}">
+				<include name="**/*.lev"/>
+				<include name="**/*.png"/>
+				<include name="**/*.mid"/>
+				<include name="**/*.wav"/>
+				<include name="*.ttf"/>
+				<include name="*.dll"/>
+				<exclude name="build/"/>
+			</fileset>
+        </jar>
+	</target>
+
+	<target name="zip" depends="init" description="Source files for stud">
+		<zip destfile="source.zip" basedir="${src}" includes="*.java *.dll **/*.png **/*.mid **/*.wav **/*.lev README*" excludes="build/**/*"/>
+	</target>
+
+   <target name="clean" description="Clean up the class files">
+
+   </target>
+</project>

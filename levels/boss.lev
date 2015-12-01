@@ -1,0 +1,20 @@
+// Boss-levelet (siste level)
+// Example syntax file
+# Format:
+; music <file> <when this song starts (measured in ticks)>
+; nextlevel <filename>
+; enemy <name> 	      <nmbr>  <time> <intrvl>  <posX> <posY> [options]
+
+powerup Powerup 4	1		40	100	50
+powerup	ForceUp	4	1		60	100	70
+
+enemy   Ufo		4	2		80	100	90	2
+enemy   Ufo		4	1		80	100	78	3
+enemy   Ufo		4	6		80	100	60	4
+enemy   Ufo		4	11		80	100	30	3
+enemy   Ufo		4	1		80	100	5	2
+enemy 	Boss1		1	350		100	80	60	1
+
+
+music boss.mid 1
+music steinar.mid 320

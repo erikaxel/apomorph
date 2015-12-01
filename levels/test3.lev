@@ -1,0 +1,64 @@
+// Example syntax file
+
+# Format:
+; all uncommented lines should begyn with a keyword.
+; Valid keywords are at the time writing "enemy", "powerup", 
+; "music" and "nextlevel". "nextlevel" should only appear once. 
+; If it is specified several times the last entry will be used.
+; values are separated with any number of tabs or spaces.
+;
+; A note on comments:
+; Valid comments begin with "// ", "# " or "; ". 
+; You NEED the trailing space, or you'll get an error!
+
+# Syntax for the "enemy" and "powerup" keywords:
+; Note: enemy and powerup are really the same keyword, but both are 
+; included to increase readability
+;
+; enemy <name> <nmbr> <time> <intrvl> <posX> <posY> [options]
+;
+; Explanations:
+; name:    The name of the object
+; nmbr:    How many you want
+; time:    When you want the first one, measured in ticks
+; intrvl:  How long time you want between them, measured in ticks
+; posX:    Initial X coordinate
+; posY:    Initial Y coordinate
+;          Measured in percent of the screen size. 
+;          E.g. "100 100" is bottom right corner.
+; options: An integer describing enemy-specific options. 
+;          May be omitted. If so, a default is used.
+; 
+; Example:
+; enemy   EulerMonster	20	5	80	100	50	1	
+; enemy	  EulerMonster	20	5	80	100	50	2
+  enemy		Ufo 	3	2	50	100	20
+; enemy		GHolder	10	2	100	100	20	4
+; enemy		GHolder	10	4	100	100	50	2
+; enemy		GHolder	10	6	100	100	80	5
+; enemy		Boss1	1	1	0	80	50
+  powerup	Powerup	5	25	50	100	30
+; powerup	ForceUp	3	175	500	100	50
+
+
+# Syntax for the "music" keyword:
+; music <file> <when this song starts (measured in ticks)>
+;
+; Example:
+music	mission2.mid 1
+
+# Syntax for the "nextlevel" keyword:
+; nextlevel <filename>
+;
+; Example:
+nextlevel test2.lev
+
+# Some bogus values to test error detection
+; enemy	SampleObject	0	10	5	0	10
+; sdfsadfsadf
+; 34 test
+; enemy	SampleObject		5		10		5
+; enemy	5		10		5		0		50
+; music nonexistent.file 30
+; enemy	Ufo	1	10	5	101	101
+

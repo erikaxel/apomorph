@@ -1,0 +1,40 @@
+// Example syntax file
+# Format:
+; music <file> <when this song starts (measured in ticks)>
+; nextlevel <filename>
+; enemy <name> 	      <nmbr>  <time> <intrvl>  <posX> <posY> [options]
+
+enemy	Ufo				10		1		10		100		20		1
+enemy	GHolder			2		1		60		100		50		1
+enemy	Ufo				10		1		10		100		80		1
+
+
+enemy	Ufo				10		250		10		100		20		2
+enemy	GHolder			2		250		60		100		50		2
+enemy	Ufo				10		250		10		100		80		2
+
+powerup	Powerup			1		350		0		100		50
+
+enemy	Ufo				10		500		10		100		20		3
+enemy	GHolder			2		500		60		100		50		3
+enemy	Ufo				10		500		10		100		80		3
+
+enemy	Spinner			10		850		20		100		10		2
+enemy	Spinner			10		850		20		100		90		2
+
+enemy	SpikeMine		1		1100	0		100		25		2
+enemy	SpikeMine		1		1100	0		100		50		2
+enemy	SpikeMine		1		1100	0		100		75		2
+
+enemy	SpliBall		1		1500	0		50		5
+enemy	SpliBall		1		1500	0		5		95
+enemy	SpliBall		1		1500	0		85		15
+
+enemy	Globber			1		2000	0		100		25		2
+enemy	BigGlobber		1		2000	0		100		50		1
+enemy	Globber			1		2000	0		100		75		2
+
+music mission4.mid 1
+music concentration.mid 1700
+
+nextlevel level5.lev

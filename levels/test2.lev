@@ -1,0 +1,13 @@
+// Example syntax file
+# Format:
+; enemy <name> <nmbr> <time> <intrvl> <posX> <posY> [options]
+; music <file> <when this song starts (measured in ticks)>
+; nextlevel <filename>
+
+enemy	EulerMonster	20	5	80	100	20	2
+enemy	EulerMonster	20	5	80	100	70	1
+enemy	Ufo 		3	2	50	100	20
+enemy	GHolder		20	0	100	100	20
+enemy	Boss1		1	100	0	80	50
+powerup	Powerup		25	25	50	100	30
+powerup	ForceUp		9	175	500	100	50
