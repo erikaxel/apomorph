@@ -1,7 +1,7 @@
 /** Level2 Skudd
  *
  * @see GameObject
- * @author Jørgen Braseth (jorgebr@stud.ntnu.no)
+ * @author JÃ¸rgen Braseth (jorgebr@stud.ntnu.no)
  */
 
 public class Shot2 extends PlayerShot {
@@ -26,7 +26,7 @@ public class Shot2 extends PlayerShot {
     }
 
 	/**
-	* Gjør ingen ting
+	* GjÃ¸r ingen ting
 	* @see PlayerShot
 	*/
 	public void action() {

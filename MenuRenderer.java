@@ -21,7 +21,7 @@ public class MenuRenderer extends TextRenderer implements KeyListener {
 	private boolean _getLastKey;
 
 	/**
-	 * Konstruktør.
+	 * KonstruktÃ¸r.
 	 * @param screen Skjermen vi jobber mot.
    	 */
 	public MenuRenderer( Screen screen, ShipControl ship1Control ) {
@@ -37,7 +37,7 @@ public class MenuRenderer extends TextRenderer implements KeyListener {
 	}
 
 	/**
-	 * Går inn i MainMenu loop.
+	 * GÃ¥r inn i MainMenu loop.
 	 * @return "StartGame" hvis spillet skal startes, "Exit" hvis spillet skal sluttes.
 	 */
 	public String mainMenu() {
@@ -126,7 +126,7 @@ public class MenuRenderer extends TextRenderer implements KeyListener {
 
 		MenuOptionControls currMenu = _menuList[ id ];
 
-		// Hvis vi holder på å sette keyen:
+		// Hvis vi holder pÃ¥ Ã¥ sette keyen:
 		if( currMenu.isKeyTextSet() ) {
 			currMenu.setKeyTextSet( false );
 			_getLastKey = true;
@@ -139,7 +139,7 @@ public class MenuRenderer extends TextRenderer implements KeyListener {
 		controlMenu();
 	}
 
-	// Lager og viser oppløsnings-meny
+	// Lager og viser opplÃ¸snings-meny
     private void resolutionMenu() {
 	    _currentMenu = _graphicMenu;
 		_graphicMenu.clear();
@@ -178,7 +178,7 @@ public class MenuRenderer extends TextRenderer implements KeyListener {
             case 3: // Sette windowed modus
                 _screen.setWindowedMode();
                 break;
-            case 4: // Prøve å gå inn i fullscreen
+            case 4: // PrÃ¸ve Ã¥ gÃ¥ inn i fullscreen
                 _screen.setFullScreen();
                 break;
 			default:  // Back

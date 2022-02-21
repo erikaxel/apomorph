@@ -2,7 +2,7 @@
  *
  *	Ringmonster
  *
- * @author Egil Sørensen
+ * @author Egil SÃ¸rensen
  */
 
 class Ring extends EnemyObject  {
@@ -21,7 +21,7 @@ class Ring extends EnemyObject  {
 		_damage = 1;
 	}
     /**
-     * Går i rundinger
+     * GÃ¥r i rundinger
      */
 	public void action() {
 

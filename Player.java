@@ -3,7 +3,7 @@
  *
  * Spillerens skip
  *
- * @author Jørgen Braseth (jorgebr@stud.ntnu.no)
+ * @author JÃ¸rgen Braseth (jorgebr@stud.ntnu.no)
  * @see GameObject
  */
 
@@ -84,7 +84,7 @@ public class Player extends GameObject {
 	*
 	* Flytter skipet midstilt langs ventre kant av skjermen.
 	* Setter full helse.
-	* Starter Udødelighet.
+	* Starter UdÃ¸delighet.
 	*/
 	public void newShip() {
 		_health = _maxHealth;
@@ -102,8 +102,8 @@ public class Player extends GameObject {
 	}
 
 	/**
-	* Skifter til neste alt-våpen
-	* Cycler alternate-våpen
+	* Skifter til neste alt-vÃ¥pen
+	* Cycler alternate-vÃ¥pen
 	*/
 	public void cycleWeapon() {
 		if (currentWeapon>_maxAltWeapons-1) {
@@ -152,7 +152,7 @@ public class Player extends GameObject {
 		}
 	}
 
-	/** Øker forcefield "ammo".
+	/** Ã˜ker forcefield "ammo".
 	 *@param a mengde ammo
 	 */
 	public void powerUpForceField(int a) {
@@ -165,7 +165,7 @@ public class Player extends GameObject {
 		_scoreBoard.setForce(forceAmmo);
 	}
 
-	/** Setter forcefield av eller på
+	/** Setter forcefield av eller pÃ¥
 	 *@param state boolean
 	 */
 	public void toggleForceField(boolean state) {
@@ -173,7 +173,7 @@ public class Player extends GameObject {
 			field.toggle();
 		}
 	}
-	/** Setter uberbeam av eller på
+	/** Setter uberbeam av eller pÃ¥
 	 *@param state boolean
 	 */
 	public void toggleBeam(boolean state) {
@@ -181,7 +181,7 @@ public class Player extends GameObject {
 			_uberBeam.toggle();
 	}
 
-	/** Øker skipets level med én.
+	/** Ã˜ker skipets level med Ã©n.
 	*/
 
 	public void levelUp() {
@@ -306,7 +306,7 @@ public class Player extends GameObject {
 	}
 
 	/**
-	* Reduserer antall liv med en, og kjører newShip();
+	* Reduserer antall liv med en, og kjÃ¸rer newShip();
 	* Avslutter spilet omt om for liv.
 	*/
 	public void die() {
@@ -324,8 +324,8 @@ public class Player extends GameObject {
 	}
 
 	/**
-	 * Gjør et steg.
-	 * Flytter skipet på skjermen
+	 * GjÃ¸r et steg.
+	 * Flytter skipet pÃ¥ skjermen
 	 */
 	public void action() {
 		_ySpeed = 0;
@@ -349,7 +349,7 @@ public class Player extends GameObject {
 	public void setControls() {
 		boolean[] keys = _controls.getKeys();
 
-		// Lyd er gøy
+		// Lyd er gÃ¸y
 		if(!_shooting && keys[ ShipControl.BOOLEAN_FIRE ]) {
 			_gunFireSound.loop();
 		} else if( _shooting && !keys[ ShipControl.BOOLEAN_FIRE ] ) {
@@ -402,7 +402,7 @@ public class Player extends GameObject {
 
 	/**
 	* Clearer objectet fra skjermen
-	* Kjøres mellom hver gang objektet tegnes.
+	* KjÃ¸res mellom hver gang objektet tegnes.
 	*/
 	public void clearDraw( Graphics2D g ) {
 		if( died ) {
@@ -413,7 +413,7 @@ public class Player extends GameObject {
 	}
 
 	/**
-	* Sørger for at skipet ikke forsvinner ut fra skjermen
+	* SÃ¸rger for at skipet ikke forsvinner ut fra skjermen
 	*/
 	public void outOfScreenAction() {
 		if( y < 0 ) y = 0;

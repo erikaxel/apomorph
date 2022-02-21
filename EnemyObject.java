@@ -38,7 +38,7 @@ public abstract class EnemyObject extends GameObject {
 	}
 
 	/**
-	 *  Skal kunne forsvinne ut til høyre og venstre, men ikke opp eller ned.
+	 *  Skal kunne forsvinne ut til hÃ¸yre og venstre, men ikke opp eller ned.
 	 */
 	public void outOfScreenAction() {
 		if( y < 0 ) {

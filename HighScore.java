@@ -50,7 +50,7 @@ public class HighScore implements Serializable {
 				return;
 			}
 		}
-		// Vi kom på sisteplass:
+		// Vi kom pÃ¥ sisteplass:
 		//shiftRight( _numScores );
 		//_scores[ _numScores ] = score;
 		//_names[ _numScores ] = name;
@@ -58,7 +58,7 @@ public class HighScore implements Serializable {
 
 	private void shiftRight( int fromIndex ) {
 		for( int i=_numScores; i>=fromIndex; i-- ) {
-        	if( i != 9 ) { // hvis den er helt på slutten, ignorer
+        	if( i != 9 ) { // hvis den er helt pÃ¥ slutten, ignorer
 	            _names[i+1] = _names[i];
 		        _scores[i+1] = _scores[i];
 	        }

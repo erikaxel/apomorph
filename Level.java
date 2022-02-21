@@ -16,7 +16,7 @@ public class Level {
 		_musicMap = musicMap;
 	}
 
-	/**Tømmer brettet
+	/**TÃ¸mmer brettet
 	 */
 	public void clear() {
 		_objectMap.clear();

@@ -1,7 +1,7 @@
 /**
  * Bakgrunnsobjekt
  *
- * @author Egil Sørensen
+ * @author Egil SÃ¸rensen
  * @see GameObject
  */
 
@@ -12,7 +12,7 @@ public class Background extends GameObject  {
 /**
  *
  * Konstruktor som stiller hvordan bakgrunnsobjektet skal se ut, samt
- * hvor fort det skal gå
+ * hvor fort det skal gÃ¥
  * @see GameObject
  *
  */
@@ -28,7 +28,7 @@ public class Background extends GameObject  {
 	}
 
 	/**
-	 * Gjør ingenting utenom å bevege seg med angitt fart
+	 * GjÃ¸r ingenting utenom Ã¥ bevege seg med angitt fart
 	 */
 
 	public void action() {
@@ -37,7 +37,7 @@ public class Background extends GameObject  {
 
 
 	/**
-	 * Gjør at objektene slettes når de forsvinner ut
+	 * GjÃ¸r at objektene slettes nÃ¥r de forsvinner ut
 	 * av skjermen
 	 */
 

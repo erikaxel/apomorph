@@ -1,5 +1,5 @@
 /** En stor slem boss
-  *	@author Jørgen Braseth (jorgebr@stud.ntnu.no), Egil Sørensen (egil@stud.ntnu.no)
+  *	@author JÃ¸rgen Braseth (jorgebr@stud.ntnu.no), Egil SÃ¸rensen (egil@stud.ntnu.no)
   * @see EnemyObject
   */
 
@@ -23,7 +23,7 @@ class Boss1 extends EnemyObject  {
 	}
 
 
-    /** Stor slem boss som går opp og ned
+    /** Stor slem boss som gÃ¥r opp og ned
      *  og skyter slemme burster
      */
 

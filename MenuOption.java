@@ -11,7 +11,7 @@ public class MenuOption {
 	private int _id;
 	private int _age;
 	/**
-	 * Konstruktør.
+	 * KonstruktÃ¸r.
 	 * @param text Teksten som menyen skal ha.
 	 * @param id Et tall som unikt identifiserer valget.
 	 */

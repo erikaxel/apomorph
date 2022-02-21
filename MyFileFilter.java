@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FilenameFilter;
 
 /**
- * Denne klassen brukes for å filer basert på en regex.
+ * Denne klassen brukes for Ã¥ filer basert pÃ¥ en regex.
  * @author Erik Axel Nielsen (erikaxel@stud.ntnu.no)
  */
 

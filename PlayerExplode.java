@@ -1,7 +1,7 @@
 /**
  * Explosion sprite
  *
- * @author Jørgen Braseth
+ * @author JÃ¸rgen Braseth
  */
 
 

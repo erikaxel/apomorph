@@ -1,7 +1,7 @@
 /** Level2 Skudd.
  *
  * @see GameObject
- * @author Jørgen Braseth <jorgebr@stud.ntnu.no>
+ * @author JÃ¸rgen Braseth <jorgebr@stud.ntnu.no>
  */
 
 import java.awt.*;
@@ -26,9 +26,9 @@ public class ShotHeatseek1 extends PlayerShot {
 	}
 
 	/**
-	* Beveger seg mot målet.
-	* Beveger seg mot målet den har satt seg.
-	* Finner et nytt mål om forrige mål er dødt.
+	* Beveger seg mot mÃ¥let.
+	* Beveger seg mot mÃ¥let den har satt seg.
+	* Finner et nytt mÃ¥l om forrige mÃ¥l er dÃ¸dt.
 	*/
 	public void action() {
 		int targetX = 2000;
@@ -39,7 +39,7 @@ public class ShotHeatseek1 extends PlayerShot {
 			int whichTarget = (int) (Math.random()*_gameRenderer.layers[ _gameRenderer.LAYER_ENEMY ].size());
 			_target = (GameObject)(_gameRenderer.layers[ _gameRenderer.LAYER_ENEMY ].get( whichTarget ));
 		}
-		// har vi et mål så retter vi oss etter det:
+		// har vi et mÃ¥l sÃ¥ retter vi oss etter det:
         if( _target != null ) {
 			targetX = _target.x+(_target.width/2);
 			targetY = _target.y+(_target.height/2);

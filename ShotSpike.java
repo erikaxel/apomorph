@@ -1,7 +1,7 @@
 /** Skudd fra spikemines
  *
  * @see GameObject
- * @author Jørgen Braseth <jorgebr@stud.ntnu.no>
+ * @author JÃ¸rgen Braseth <jorgebr@stud.ntnu.no>
  */
 import java.awt.*;
 public class ShotSpike extends EnemyShot {
@@ -11,7 +11,7 @@ public class ShotSpike extends EnemyShot {
 	/**
 	* Konstruktor
 	* @param option setter skade fra skuddet
-	* @param direction setter retningen på skuddet
+	* @param direction setter retningen pÃ¥ skuddet
 	* @see EnemyShot
 	*/
 	public ShotSpike( GameRenderer gr, int x, int y,int direction, int option) {

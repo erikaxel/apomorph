@@ -3,7 +3,7 @@
  * Klasse som genererer bakgrunnsobjekter av forskjellige typer
  * slik at det blir laget bakgrunn etter hver som vi "flyr" fremover
  *
- * @author Egil Sørensen
+ * @author Egil SÃ¸rensen
  */
 public class BackgroundFactory {
 
@@ -14,7 +14,7 @@ public class BackgroundFactory {
     private int tick;
 
     /**
-     * Konstruktor som tar inn en GameRenderer for å vite åssen de forskjellige
+     * Konstruktor som tar inn en GameRenderer for Ã¥ vite Ã¥ssen de forskjellige
      * objektene skal legges til
      */
 

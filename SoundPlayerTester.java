@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.io.StreamTokenizer;
 
 /**
- * Denne klassen brukes utelukkende for å teste SoundPlayer-klassen,
+ * Denne klassen brukes utelukkende for Ã¥ teste SoundPlayer-klassen,
  * og er ikke egentlig en del av prosjektet.
  * 
  * @author Knut Auvor Grythe
@@ -12,7 +12,7 @@ import java.io.StreamTokenizer;
 public class SoundPlayerTester {
 
 	/**
-	 * main-metode for å teste dritten.
+	 * main-metode for Ã¥ teste dritten.
 	 * Litt grisete, men funker.
 	 */
 	public static void main(String[] args){
@@ -59,7 +59,7 @@ public class SoundPlayerTester {
 				} catch (IOException e) {
 					System.out.println("Feil ved lesing fra tastatur.");
 				}
-				//FIXME: Bugger når filnavnet starter med et tall
+				//FIXME: Bugger nÃ¥r filnavnet starter med et tall
 				if (tokenType == tokenizer.TT_WORD) {
 					SoundPlayer.getInstance().play(tokenizer.sval);
 				} else {
@@ -71,7 +71,7 @@ public class SoundPlayerTester {
 				} catch (IOException e) {
 					System.out.println("Feil ved lesing fra tastatur.");
 				}
-				//FIXME: Bugger når filnavnet starter med et tall
+				//FIXME: Bugger nÃ¥r filnavnet starter med et tall
 				if (tokenType == tokenizer.TT_WORD) {
 					SoundPlayer.getInstance().startLoop(tokenizer.sval);
 				} else {

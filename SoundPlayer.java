@@ -83,7 +83,7 @@ public class SoundPlayer {
 	}
 
 	/**
-	 * Velger en MIDI-fil og starter å spille den i loop.
+	 * Velger en MIDI-fil og starter Ã¥ spille den i loop.
 	 * @param midiFile Filen som skal spilles av
 	 */
 	public void startLoop(String midiFile){
@@ -106,14 +106,14 @@ public class SoundPlayer {
 				}
 				sequencer.start();
 			} else {
-				System.out.println("\nJava sliter litt med å finne en "
-						+ "sequence i denne fila. Prøv en annen.");
+				System.out.println("\nJava sliter litt med Ã¥ finne en "
+						+ "sequence i denne fila. PrÃ¸v en annen.");
 			}
 		}
 	}
 
 	/**
-	 * Starter å spille fra gjeldende sted i loopen
+	 * Starter Ã¥ spille fra gjeldende sted i loopen
 	 */
 	public void resumeLoop(){
 		if (musicEnabled) {
@@ -137,7 +137,7 @@ public class SoundPlayer {
 	}
 
 	/**
-	 * Setter hastigheten på midi-sangen
+	 * Setter hastigheten pÃ¥ midi-sangen
 	 * @param speed Farten. 1.0 er vanlig fart, 2.0 er dobbel, etc.
 	 */
 	public void loopSpeed(float speed) {
@@ -145,7 +145,7 @@ public class SoundPlayer {
 	}
 
 	/**
-	 * Justerer hastigheten på midi-lyden
+	 * Justerer hastigheten pÃ¥ midi-lyden
 	 * @param adjustment Tallet det justeres med.
 	 *		Positivt tall justerer opp, negativt justerer ned.
 	 */
@@ -155,7 +155,7 @@ public class SoundPlayer {
 	}
 
 	/**
-	 * Multipliserer hastigheten på midi-sangen med <CODE>multiplier</CODE>
+	 * Multipliserer hastigheten pÃ¥ midi-sangen med <CODE>multiplier</CODE>
 	 * @param multiplier Tallet man skal multiplisere med
 	 */
 	public void loopSpeedMultiply(float multiplier) {

@@ -1,5 +1,5 @@
 /** Mine som skyter 'pigger'.
- * Går i SMÅ sinus-bølger, sakte mot venstre
+ * GÃ¥r i SMÃ… sinus-bÃ¸lger, sakte mot venstre
  * Hastighet kan settes i options
  *
  * @author J&orslash;rgen Braseth (jorgebr@stud.ntnu.no)
@@ -16,7 +16,7 @@ public class SpikeMine extends EnemyObject  {
 	}
 
     /**
-     * Beveger seg i små sinuskurver sakte mot venstre.
+     * Beveger seg i smÃ¥ sinuskurver sakte mot venstre.
      * skyter med jevne mellomrom
      */
 	public void action() {
@@ -66,9 +66,9 @@ public class SpikeMine extends EnemyObject  {
 
 	/**
 	* Arvet fra EnemyObject.
-	* Gjør ingen ting - Denne fienden er udødelig
+	* GjÃ¸r ingen ting - Denne fienden er udÃ¸delig
 	*/
 	public void hit(int dmg) {
-	//NOOP denne fienden er udødelig
+	//NOOP denne fienden er udÃ¸delig
 	}
 }

@@ -1,5 +1,5 @@
-/** En fiende som går bratt oppover eller nedover og så mot midten
-	@author Egil Sørensen (egil@stud.ntnu.no)
+/** En fiende som gÃ¥r bratt oppover eller nedover og sÃ¥ mot midten
+	@author Egil SÃ¸rensen (egil@stud.ntnu.no)
   */
 
 class EulerMonster extends EnemyObject  {
@@ -16,7 +16,7 @@ class EulerMonster extends EnemyObject  {
 	}
 
     /**
-     * Fienden går enten bratt oppover eller nedover først og går så fort mot midten av bildet (er planen =)
+     * Fienden gÃ¥r enten bratt oppover eller nedover fÃ¸rst og gÃ¥r sÃ¥ fort mot midten av bildet (er planen =)
      */
 	public void action() {
         switch (_option){

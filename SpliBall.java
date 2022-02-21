@@ -1,9 +1,9 @@
 /**
  *
- *	Monster som teleporterer seg rundt omkring på skjermen
+ *	Monster som teleporterer seg rundt omkring pÃ¥ skjermen
  *  og skyter etter hvor du er hen
  *
- * @author Egil Sørensen
+ * @author Egil SÃ¸rensen
  * @see EnemyObject
  */
 
@@ -33,7 +33,7 @@ class SpliBall extends EnemyObject  {
 
 
     /**
-     * Står i ro og skyter, teleporterer seg av og til
+     * StÃ¥r i ro og skyter, teleporterer seg av og til
      */
 
 	public void action() {

@@ -2,7 +2,7 @@ public final class HighResTimer {
 	private double time;
 	private native double getTime();
 	private static boolean _useNative;
-	/** Gir oss frekvensen på klokken i Hz */
+	/** Gir oss frekvensen pÃ¥ klokken i Hz */
 	private native double getFrequency();
 
 	static {
@@ -16,7 +16,7 @@ public final class HighResTimer {
 	}
 
 	/**
-	 * Konstruktør
+	 * KonstruktÃ¸r
 	 */
 	public HighResTimer() {
 		timeElapsed();
@@ -24,7 +24,7 @@ public final class HighResTimer {
 
 	/**
 	 * Vil returnerer antall sekunder siden forrige gang timeElapsed() ble kalt.
-	 * Hvis den ikke er kalt før, vil den returnere tid siden objektet ble laget.
+	 * Hvis den ikke er kalt fÃ¸r, vil den returnere tid siden objektet ble laget.
 	 * @return Antall sekunder siden forrige kall.
 	 */
 	public double timeElapsed() {
@@ -41,13 +41,13 @@ public final class HighResTimer {
 		if( _useNative ) {
 			return getFrequency();
 		} else {
-			return 1000.0; // standard linux oppløsning
+			return 1000.0; // standard linux opplÃ¸sning
 		}
 	}
 
     /**
      * Kun for testing.  Jeg fikk ca 1ms som beste tid.
-     * Men dette kan selvsagt også være pga Thread.sleep()
+     * Men dette kan selvsagt ogsÃ¥ vÃ¦re pga Thread.sleep()
      * @param args Bare tull
      */
 	public static void main( String[] args ) {

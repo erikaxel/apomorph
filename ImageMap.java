@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.TreeSet;
 
 /**
- * Singleton som forhåndslaster bildet og gjør dem lett tilgjengelige
+ * Singleton som forhÃ¥ndslaster bildet og gjÃ¸r dem lett tilgjengelige
  * via en hash-map.
- * Den lagerer bildene i en hash-map, sortert på basenavn.
+ * Den lagerer bildene i en hash-map, sortert pÃ¥ basenavn.
  * Basenavn er
  * @author Erik Axel Nielsen (erikaxel@stud.ntnu.no)
  * @author Knut Auvor Grythe
@@ -29,7 +29,7 @@ class ImageMap {
 	}
 
 	/**
-	 * Få tak i singeltonen som har våre fine flotte bilder.
+	 * FÃ¥ tak i singeltonen som har vÃ¥re fine flotte bilder.
 	 * @return Singeltonen som har bildene
 	 */
 	public static ImageMap getInstance() {
@@ -67,7 +67,7 @@ class ImageMap {
 	/**
 	 * Henter et bilde fra map'en.
 	 * @param desc Beskrivelsen (basenavnet)
-	 * @return Bildet som hører til basenavnet.
+	 * @return Bildet som hÃ¸rer til basenavnet.
 	 */
 	public Image[] getImage( String desc ) {
 		if (!imageMap.containsKey(desc)) {

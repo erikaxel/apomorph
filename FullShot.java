@@ -1,5 +1,5 @@
 /**Siktbart skudd
- * Skudd som kan settes med både x og y fart og skade
+ * Skudd som kan settes med bÃ¥de x og y fart og skade
  *
  * @see GameObject
  * @author J&oslash;rgen Braseth (jorgebr@stud.ntnu.no)

@@ -1,7 +1,7 @@
 /**
  * Ship Weapon-powerup
  *
- * @author Jørgen Braseth (jorgebr@stud.ntnu.no)
+ * @author JÃ¸rgen Braseth (jorgebr@stud.ntnu.no)
  * @see GameObject
  */
 
@@ -28,9 +28,9 @@ public class Powerup extends GameObject  {
 	}
 
 	/**
-	 *Utfører kollisjon.
+	 *UtfÃ¸rer kollisjon.
 	 *Om kollisjon med skip:
-	 *kjører skipets levelUp() og kjører die()
+	 *kjÃ¸rer skipets levelUp() og kjÃ¸rer die()
 	 *
 	 *@param otherObject Objektet dette objektet kolliderer med
 	 */

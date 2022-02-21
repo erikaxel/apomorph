@@ -5,7 +5,7 @@ import java.awt.image.*;
 /**
  * Scoreboard til toppen av vinduet.
  * Viser liv, score, forcefield osv
- * @author Jørgen Braseth (jorgebr@stud.ntnu.no), Erik Axel Nielsen (erikaxel@stud.ntnu.no)
+ * @author JÃ¸rgen Braseth (jorgebr@stud.ntnu.no), Erik Axel Nielsen (erikaxel@stud.ntnu.no)
  */
 
 public class ScoreBoard extends Container {
@@ -42,7 +42,7 @@ public class ScoreBoard extends Container {
 		_forceBar = new Image[101];
 		for( int i=0; i<101; i++ ) {
 			_forceBar[i] = tempForceBar.getScaledInstance( (i*8/10)+1, 27, Image.SCALE_FAST );
-			_forceBar[i].getHeight( null ); // tvinger bildet til å bli laget... (ellers flimrer det)
+			_forceBar[i].getHeight( null ); // tvinger bildet til Ã¥ bli laget... (ellers flimrer det)
 		}
 		_healthBar = new Image[101];
 		for( int i=0; i<101; i++ ) {
@@ -50,7 +50,7 @@ public class ScoreBoard extends Container {
              ImageFilter filter = new CropImageFilter( 0,0, (i*8/10)+1, 27 );
              ImageProducer producer = new FilteredImageSource( source, filter );
              _healthBar[i] = createImage( producer );
-			_healthBar[i].getHeight( null ); // tvinger bildet til å bli laget... (ellers flimrer det)
+			_healthBar[i].getHeight( null ); // tvinger bildet til Ã¥ bli laget... (ellers flimrer det)
 		}
 		// Fiks slik at vi ikke kan fly over scoreboarden
 		gr.setPlayingSize( gr.getWidth(), gr.getHeight() - (_movie[0].getHeight( null ) + 10 ) );
@@ -87,8 +87,8 @@ public class ScoreBoard extends Container {
 	}
 
 	/**
-	* Setter valgt alternate-våpen.
-	* @param w nummer som betegner våpenet
+	* Setter valgt alternate-vÃ¥pen.
+	* @param w nummer som betegner vÃ¥penet
 	*/
 	public void setAltWeapon(int w) {
 		_altWeapon = w;
@@ -105,8 +105,8 @@ public class ScoreBoard extends Container {
 	}
 
 	/**
-	* Øker score.
-	* @param score mengden score økes med
+	* Ã˜ker score.
+	* @param score mengden score Ã¸kes med
 	*/
 	public void increaseScore( int score ) {
 		_score += score;
@@ -114,7 +114,7 @@ public class ScoreBoard extends Container {
 	}
 
 	/**
-	* Returnerer score vist på scoreboard
+	* Returnerer score vist pÃ¥ scoreboard
 	*/
 	public int getScore(){
 		return _score;
@@ -123,8 +123,8 @@ public class ScoreBoard extends Container {
 
 	/**
 	* Tegner scoreboard og dets elimenter.
-	* Tegner liv-symbolene, score, våpen osv.
-	* Kjøres hver gang scoreboard endres.
+	* Tegner liv-symbolene, score, vÃ¥pen osv.
+	* KjÃ¸res hver gang scoreboard endres.
 	*/
 	public void draw( Graphics2D g ) {
 		if( _hasChanged || _drawEachFrame ) {

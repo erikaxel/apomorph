@@ -1,8 +1,8 @@
 import java.io.IOException;
 
 /**
-  *  Apo er starter-klassen. Den har main-metoden, åpner en fullscreen og starter spillet
-  *  Du kan gå ut av spillet ved å trykke på Esc knappen
+  *  Apo er starter-klassen. Den har main-metoden, Ã¥pner en fullscreen og starter spillet
+  *  Du kan gÃ¥ ut av spillet ved Ã¥ trykke pÃ¥ Esc knappen
   *  @author Erik Axel Nielsen (erikaxel@stud.ntnu.no)
  */
 
@@ -31,8 +31,8 @@ public class Apo {
 
 	/**
 	 * Konstruktoren, starter spillet
-	 * @param initialLevel levelet som man skal starte på.
-	 * @param initialPlayerLevel Hvor bra skipet skal være når man starter.
+	 * @param initialLevel levelet som man skal starte pÃ¥.
+	 * @param initialPlayerLevel Hvor bra skipet skal vÃ¦re nÃ¥r man starter.
 	 */
 	public Apo( String initialLevel, int initialPlayerLevel) {
 		this.initialLevel = initialLevel;
@@ -51,11 +51,11 @@ public class Apo {
 
 		ImageMap.getInstance().setFont( "Jambotan.ttf" );
 
-		// slå av musikk
+		// slÃ¥ av musikk
 		SoundPlayer.getInstance().musicEnabled = true;
 		player1Control = new ShipControl();
 
-		// Forsøk å finne skjerm-modus og lage et vindu.
+		// ForsÃ¸k Ã¥ finne skjerm-modus og lage et vindu.
         screen = new Screen();
 		screen.setTitle("Apomorph");
 
@@ -71,7 +71,7 @@ public class Apo {
 			}
 
 		} catch ( Exception e ) {
-			// Prøver å rydde opp etter oss:
+			// PrÃ¸ver Ã¥ rydde opp etter oss:
 			screen.restoreScreen();
 			screen.hide();
 			screen.dispose();
@@ -165,7 +165,7 @@ public class Apo {
             }
 
   		} catch( IOException e) {
-			Log.log( "Tull og tøys på gang i highscore filen" );
+			Log.log( "Tull og tÃ¸ys pÃ¥ gang i highscore filen" );
 		} catch( NullPointerException e ) {
 			Log.log( "Kunne ikke finne highscore filen." );
 		}

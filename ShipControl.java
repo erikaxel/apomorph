@@ -3,7 +3,7 @@
  *
  * Lytter etter tastene som styrer skipet
  *
- * @author Jørgen Braseth (jorgebr@stud.ntnu.no)
+ * @author JÃ¸rgen Braseth (jorgebr@stud.ntnu.no)
  */
 
 import java.awt.event.*;
@@ -27,13 +27,13 @@ public class ShipControl extends KeyAdapter {
 	public static final int BOOLEAN_DOWN = 1;
 	/** Verdi for bevegelse venstre */
 	public static final int BOOLEAN_LEFT = 2;
-	/** Verdi for bevegelse høyre */
+	/** Verdi for bevegelse hÃ¸yre */
 	public static final int BOOLEAN_RIGHT = 3;
 	/** Verdi for tast som skyter normale skudd */
 	public static final int BOOLEAN_FIRE = 4;
-	/** Verdi for tast som fyrer av alt-våpen */
+	/** Verdi for tast som fyrer av alt-vÃ¥pen */
 	public static final int BOOLEAN_ALTFIRE = 5;
-	/** Verdi for tast som skifter våpen */
+	/** Verdi for tast som skifter vÃ¥pen */
 	public static final int BOOLEAN_CHANGEWEP = 6;
 
 
@@ -56,7 +56,7 @@ public class ShipControl extends KeyAdapter {
 
   	/**Setter taster
 	 *
-	 *@param button navn på funksjon - Fire,Alternate,Up,Down,Left,Right,ChangeWeapon
+	 *@param button navn pÃ¥ funksjon - Fire,Alternate,Up,Down,Left,Right,ChangeWeapon
 	 *@param newKey koden for den nye tasten. Fra KeyEvent.getKeyCode();
 	 */
 	public void setKey(String button, int newKey) {
@@ -80,7 +80,7 @@ public class ShipControl extends KeyAdapter {
 
 	/**
 	* Returnerer hvilke knapp som brukes for en gitt knapp.
-	* @param button navnet på knappn en ønsker info om
+	* @param button navnet pÃ¥ knappn en Ã¸nsker info om
 	*/
 	public int getKey( String button ) {
 		if ("Fire".equals(button)) {
@@ -101,7 +101,7 @@ public class ShipControl extends KeyAdapter {
 	}
 
 	/**
-	* Utfører arbeid ut ifra hvilke tast som trykkes
+	* UtfÃ¸rer arbeid ut ifra hvilke tast som trykkes
 	* @param e tastetrykket
 	*/
 	public void keyPressed( KeyEvent e ) {
@@ -125,7 +125,7 @@ public class ShipControl extends KeyAdapter {
 	}
 
 	/**
-	* Utfører arbeid ut ifra hvilke tast som slippes opp
+	* UtfÃ¸rer arbeid ut ifra hvilke tast som slippes opp
 	* @param e tastetrykket
 	*/
 	public void keyReleased(KeyEvent e) {

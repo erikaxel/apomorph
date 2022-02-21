@@ -1,6 +1,6 @@
 /**
  * En fiende som ser ut som en klassisk flyvende tallerken.
- * Går i sinusbølger og slikt.
+ * GÃ¥r i sinusbÃ¸lger og slikt.
  * @author Erik Axel Nielsen (erikaxel@stud.ntnu.no)
  */
 
@@ -13,7 +13,7 @@ class Ufo extends EnemyObject  {
 	}
 
     /**
-     * Alt det denne fienden gjør er å bevege seg i sinuskurver over skjermen.
+     * Alt det denne fienden gjÃ¸r er Ã¥ bevege seg i sinuskurver over skjermen.
      */
 	public void action() {
 		_ySpeed = (int) (5 * Math.sin( (double)_age/200 * ( 4*Math.PI ) ));

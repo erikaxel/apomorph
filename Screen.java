@@ -5,12 +5,12 @@ import java.util.TreeSet;
 
 /**
  * Denne klassen implementerer rotvinduet i applikasjonen.
- * Setter opp forskjellige oppløsninger, fullskjerm og får tak i Graphic objekter.
+ * Setter opp forskjellige opplÃ¸sninger, fullskjerm og fÃ¥r tak i Graphic objekter.
  * @author Erik Axel Nielsen (erikaxel@stud.ntnu.no)
  *
  * Bugs:
- * Hvis du setter oppløsning, og så skifter til fullscreen så får vi en feil av en eller annen grunn.
- * Har brukt mye tid til å fikse det, men finner ikke hva som er feil.
+ * Hvis du setter opplÃ¸sning, og sÃ¥ skifter til fullscreen sÃ¥ fÃ¥r vi en feil av en eller annen grunn.
+ * Har brukt mye tid til Ã¥ fikse det, men finner ikke hva som er feil.
  * Hvis noen finner det er det finfint.
  */
 
@@ -20,12 +20,12 @@ public class Screen extends JFrame {
 	private DisplayMode _startResolution, _currentResolution;
 	private DisplayMode[] _allResolutions;
 	private HighResTimer _timer;
-	private final static double MIN_ROUND_TIME = 40; // minimum tid på 20ms.
-	/** Står vi i fullskjermsmodus? */
+	private final static double MIN_ROUND_TIME = 40; // minimum tid pÃ¥ 20ms.
+	/** StÃ¥r vi i fullskjermsmodus? */
     public boolean isFullScreen;
 
 	/**
-	 * Konstruktør.
+	 * KonstruktÃ¸r.
 	 */
 	public Screen() {
 		isFullScreen = false;
@@ -106,7 +106,7 @@ public class Screen extends JFrame {
 	}
 
 	/**
-	 * Returner om vi kan gå inn i fullskjerm.
+	 * Returner om vi kan gÃ¥ inn i fullskjerm.
 	 * @return true hvis vi kan bruke fullskjerm, false ellers
 	 */
 	public boolean isFullScreenSupported() {
@@ -114,15 +114,15 @@ public class Screen extends JFrame {
 	}
 
 	/**
-	 * Returnerer den nåværende resolusjonen
-	 * @return resolusjonen vi er i nå
+	 * Returnerer den nÃ¥vÃ¦rende resolusjonen
+	 * @return resolusjonen vi er i nÃ¥
 	 */
 	public DisplayMode getCurrentResolution() {
 		return _currentResolution;
 	}
 
 	/**
-	 * Sette skjermen tilbake til der vi var før vi startet spillet.
+	 * Sette skjermen tilbake til der vi var fÃ¸r vi startet spillet.
 	 */
 	public void restoreScreen() {
 		if( isFullScreen ) {
@@ -131,9 +131,9 @@ public class Screen extends JFrame {
 	}
 
 	/**
-	 * Prøver å sette en resolusjon uten å sjekke om den finnes.
-	 * @param width Bredde på resolusjon
-	 * @param height Høyde på resolusjon
+	 * PrÃ¸ver Ã¥ sette en resolusjon uten Ã¥ sjekke om den finnes.
+	 * @param width Bredde pÃ¥ resolusjon
+	 * @param height HÃ¸yde pÃ¥ resolusjon
 	 */
 	public void forceWindowedResolution( int width, int height ) {
 		_currentResolution = new DisplayMode( width, height, 16, 70);
@@ -141,8 +141,8 @@ public class Screen extends JFrame {
 	}
 
 	/**
-	 * Kjøreløkken. Henter et Graphic objekt og gir det til Rendereren. Skriver så til skjerm.
-	 * @param re Renderen som skal skrive på Graphic objektet vårt.
+	 * KjÃ¸relÃ¸kken. Henter et Graphic objekt og gir det til Rendereren. Skriver sÃ¥ til skjerm.
+	 * @param re Renderen som skal skrive pÃ¥ Graphic objektet vÃ¥rt.
 	 */
 	public void renderLoop( Renderer re ) {
 		this.addKeyListener( re );
@@ -150,7 +150,7 @@ public class Screen extends JFrame {
 		this.removeKeyListener( re );
 	}
 
-	// Den faktiske løkken. renderLoop brukes til å sette opp og ta ned keyListener
+	// Den faktiske lÃ¸kken. renderLoop brukes til Ã¥ sette opp og ta ned keyListener
 	private void renderLoopAux( Renderer re ) {
 		int time;
 		re.done = false;
@@ -170,7 +170,7 @@ public class Screen extends JFrame {
         }
 	}
 	/**
-	 * Kjører render() en gang bare.
+	 * KjÃ¸rer render() en gang bare.
 	 */
 	public void renderOnce( Renderer re ) {
 		Graphics2D g = (Graphics2D)getBufferStrategy().getDrawGraphics();
@@ -180,7 +180,7 @@ public class Screen extends JFrame {
 	}
 
 	public void clearScreen() {
-		// Vi clearer 3 ganger for å være sikker på at alle buffrene har blitt clearet
+		// Vi clearer 3 ganger for Ã¥ vÃ¦re sikker pÃ¥ at alle buffrene har blitt clearet
 		for( int i=0; i<3; i++ ) {
 			Graphics2D g = (Graphics2D)getBufferStrategy().getDrawGraphics();
 			g.clearRect( 0, 0, _currentResolution.getWidth(), _currentResolution.getHeight() );
@@ -189,10 +189,10 @@ public class Screen extends JFrame {
 		}
 	}
    /**
-    * Prøver å finne oppløsningen den gitte oppløsningen.
+    * PrÃ¸ver Ã¥ finne opplÃ¸sningen den gitte opplÃ¸sningen.
     * @param width Bredden som skal finnes
-    * @param height Høyden som skal finnes
-    * @return Referanse til oppløsningen hvis den finnes, eller null hvis den ikke finnes.
+    * @param height HÃ¸yden som skal finnes
+    * @return Referanse til opplÃ¸sningen hvis den finnes, eller null hvis den ikke finnes.
     */
 	public DisplayMode findResolution( int width, int height ) {
 		for( int i=0; i<_allResolutions.length; i++ ) {
@@ -228,7 +228,7 @@ public class Screen extends JFrame {
 		}
 		return returnMode;
 	}
-    // Aktiver dobbeltbuffer (fjerner flimmer og slikt på skjermen)
+    // Aktiver dobbeltbuffer (fjerner flimmer og slikt pÃ¥ skjermen)
 	private void createStrategy() {
 		createBufferStrategy( 2 );
 	}

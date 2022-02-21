@@ -15,7 +15,7 @@ public class Menu {
    	private boolean _paintPointer;
 
 	/**
-	 * Konstruktør
+	 * KonstruktÃ¸r
 	 */
 	public Menu() {
 		_optionList = new ArrayList();
@@ -24,8 +24,8 @@ public class Menu {
 	}
 
 	/**
-	 * Angir om pekeren på menyskjermen skal vises (det lille skipet)
-	 * Verdien er default på true
+	 * Angir om pekeren pÃ¥ menyskjermen skal vises (det lille skipet)
+	 * Verdien er default pÃ¥ true
 	 * @param value false hvis du ikke vil vise, true ellers.
 	 */
 	public void setPaintPointer( boolean value ) {
@@ -49,7 +49,7 @@ public class Menu {
 	}
 
 	/**
-	 * Går til neste menyvalg.
+	 * GÃ¥r til neste menyvalg.
 	 */
     public void next() {
 	    if( _selected == ( _optionList.size() -1 ) ) {
@@ -60,7 +60,7 @@ public class Menu {
     }
 
 	/**
-	 * Går til forrige menyvalg.
+	 * GÃ¥r til forrige menyvalg.
 	 */
 	public void previous() {
 		if( _selected == 0 ) {
@@ -71,7 +71,7 @@ public class Menu {
 	}
 
 	/**
-	 * Når render har returnert, kan man sjekke retur-verdien med denne funksjonen
+	 * NÃ¥r render har returnert, kan man sjekke retur-verdien med denne funksjonen
 	 * @return Valg verdi.
 	 */
 	public int getSelectedId() {
@@ -80,11 +80,11 @@ public class Menu {
 	}
 
 	/**
-	 * Tegner menyen på skjermen.
-	 * @param g Et graphics objekt å tegne på.
+	 * Tegner menyen pÃ¥ skjermen.
+	 * @param g Et graphics objekt Ã¥ tegne pÃ¥.
 	 * @param x x startsted for menyen
 	 * @param y y startsted for menyen
-	 * @param font Fonten å tegne menyen med
+	 * @param font Fonten Ã¥ tegne menyen med
 	 */
 	public void draw( Graphics2D g, int x, int y, Font font ) {
 		for( int i=0; i<_optionList.size(); i++ ) {

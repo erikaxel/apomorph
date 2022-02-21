@@ -14,8 +14,8 @@ public abstract class TextRenderer extends Renderer {
 
 
 	/**
-	 * Starter en loop som returnerer når brukeren har valgt noe.
-	 * @param g Et Graphics objekt som vi kan tegne på.
+	 * Starter en loop som returnerer nÃ¥r brukeren har valgt noe.
+	 * @param g Et Graphics objekt som vi kan tegne pÃ¥.
 	 */
     public void render( Graphics2D g) {
 		g.setFont( ImageMap.getInstance().getFont( g ) );
@@ -25,7 +25,7 @@ public abstract class TextRenderer extends Renderer {
 
 		g.setRenderingHint( RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON );
 
-		// Tegne logoen vår øverst:
+		// Tegne logoen vÃ¥r Ã¸verst:
 		g.drawImage( _logo, (_width - _logo.getWidth( null ))/2, 0, null );
 
 		g.setColor( Color.WHITE );              // tekst farge
@@ -35,7 +35,7 @@ public abstract class TextRenderer extends Renderer {
 	}
     /**
      * Underklassenes egen rendering.
-     * @param g Et grafikkobjekt å tegne på
+     * @param g Et grafikkobjekt Ã¥ tegne pÃ¥
      */
 	public abstract void renderText( Graphics2D g );
 

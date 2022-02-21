@@ -2,7 +2,7 @@
  * Varmes&oslash;kende 'skyer'
  *
  * @see GameObject
- * @author Jørgen Braseth <jorgebr@stud.ntnu.no>
+ * @author JÃ¸rgen Braseth <jorgebr@stud.ntnu.no>
  */
 
 public class ShotCloud extends EnemyShot {
@@ -27,8 +27,8 @@ public class ShotCloud extends EnemyShot {
 	}
 
 	/**
-	* Beveger seg mot målet.
-	* Finner et nytt mål om det forrige er dødt.
+	* Beveger seg mot mÃ¥let.
+	* Finner et nytt mÃ¥l om det forrige er dÃ¸dt.
 	*/
 	public void action() {
 		if (_target==null) {

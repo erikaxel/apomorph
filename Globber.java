@@ -1,13 +1,13 @@
 /** Globber Enemy.
  *
  *	Pattern-monster
- *	Beveger seg fremover for så å fare bakover og etterlate et sport med fallende skudd.
+ *	Beveger seg fremover for sÃ¥ Ã¥ fare bakover og etterlate et sport med fallende skudd.
  *
  * @author J&oslash;rgen Braseth (jorgebr@stud.ntnu.no)
  */
 
 class Globber extends EnemyObject  {
-	private int BehaveState; //type oppførsel
+	private int BehaveState; //type oppfÃ¸rsel
 	private int startX;
 	public Globber( GameRenderer gr, Integer x, Integer y, Integer option ) {
 		super( gr, "globber"+option.intValue(), x, y, option, 5*option.intValue(), 600*option.intValue() );
@@ -16,11 +16,11 @@ class Globber extends EnemyObject  {
 		_damage = 1*_option;
 	}
     /**
-     * Gjør et steg av hva det nå måtte være
+     * GjÃ¸r et steg av hva det nÃ¥ mÃ¥tte vÃ¦re
      */
 	public void action() {
 
-		if (BehaveState == 0) { //inn på bildet
+		if (BehaveState == 0) { //inn pÃ¥ bildet
 			_xSpeed=-10;
 			_ySpeed = (float)(Math.sin(((double)_age/10)*Math.PI)*2);
 			if (x<=startX) {

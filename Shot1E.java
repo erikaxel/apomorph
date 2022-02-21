@@ -2,7 +2,7 @@
  * Level1 Skudd
  *
  * @see GameObject
- * @author Egil Sørensen (egil@stud.ntnu.no)
+ * @author Egil SÃ¸rensen (egil@stud.ntnu.no)
  */
 
 
@@ -36,7 +36,7 @@ public class Shot1E extends EnemyShot {
 
 
     /**
-	 * Konstruktor hvor både fart bort og opp kan stilles
+	 * Konstruktor hvor bÃ¥de fart bort og opp kan stilles
 	 * @see EnemyShot
 	 */
 
@@ -48,7 +48,7 @@ public class Shot1E extends EnemyShot {
 
 
 	/**
-	 * Gjør ingenting (går bare rett frem)
+	 * GjÃ¸r ingenting (gÃ¥r bare rett frem)
 	 */
 
 	public void action() {

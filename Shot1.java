@@ -2,7 +2,7 @@
  * Level1 Skudd
  *
  * @see GameObject
- * @author Jørgen Braseth (jorgebr@stud.ntnu.no)
+ * @author JÃ¸rgen Braseth (jorgebr@stud.ntnu.no)
  */
 
 public class Shot1 extends PlayerShot {
@@ -29,7 +29,7 @@ public class Shot1 extends PlayerShot {
 
 	/**
 	* Arvet fra PlayerShot.
-	* Gjør ingen ting.
+	* GjÃ¸r ingen ting.
 	* @see PlayerShot
 	*/
 	public void action() {

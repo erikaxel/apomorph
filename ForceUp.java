@@ -1,7 +1,7 @@
 /**
  * Ship Forcefield-ammo
  *
- * @author Jørgen Braseth (jorgebr@stud.ntnu.no)
+ * @author JÃ¸rgen Braseth (jorgebr@stud.ntnu.no)
  * @see GameObject
  */
 
@@ -28,9 +28,9 @@ public class ForceUp extends GameObject  {
 	}
 	
 	/**
-	 *Utfører kollisjon.
+	 *UtfÃ¸rer kollisjon.
 	 *Om kollisjon med skip:
-	 *gir skipet ammo og kjører die()
+	 *gir skipet ammo og kjÃ¸rer die()
 	 *
 	 *@param otherObject Objektet dette objektet kolliderer med
 	 */

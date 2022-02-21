@@ -12,7 +12,7 @@ public class LevelLoader extends Thread {
 	private GameRenderer _gr;		// gamerendereren
 	private String _levelName;			// filnavnet til levelet
 	private static String _levelDir; // diren som levlene ligger i.
-	private HashMap _objectMap; // levelet vi holder på med nå.
+	private HashMap _objectMap; // levelet vi holder pÃ¥ med nÃ¥.
 	private HashMap _musicMap;
     private String _nextLevel;
 	private boolean _lastLevel;
@@ -80,15 +80,15 @@ public class LevelLoader extends Thread {
 	}
 
 	/**
-	 * Returnerer om levelet er ferdig med å laste
-	 * @return true om lastingen er fullført, false ellers
+	 * Returnerer om levelet er ferdig med Ã¥ laste
+	 * @return true om lastingen er fullfÃ¸rt, false ellers
 	 */
 	public boolean loadingDone() {
 		return _LevelLoadingDone;
 	}
 
 	/**
-	 * Gjør i utgangspunktet ingenting
+	 * GjÃ¸r i utgangspunktet ingenting
 	 */
 	public void run() {
 		_objectMap = new HashMap();
@@ -122,7 +122,7 @@ public class LevelLoader extends Thread {
   	}
 
 	/**
-	 * Leser inn en fil og kaller <CODE>addObjects</CODE> for å generere fiender
+	 * Leser inn en fil og kaller <CODE>addObjects</CODE> for Ã¥ generere fiender
 	 * @throws IOException
 	 */
 	private void readLevel() throws IOException{
@@ -149,11 +149,11 @@ public class LevelLoader extends Thread {
 		t.wordChars(041,126);
 
 		/*
-		 * Dette ble litt drøyt med indentering.
+		 * Dette ble litt drÃ¸yt med indentering.
 		 * Kunne blitt mindre om jeg kastet exceptions for hver syntax error
-		 * i stedet for å bare printe feilmelding og gå videre, men da ville
-		 * man ikke få se alle syntax errorene på en gang.
-		 * Kjappere å debugge levels slik det er nå.
+		 * i stedet for Ã¥ bare printe feilmelding og gÃ¥ videre, men da ville
+		 * man ikke fÃ¥ se alle syntax errorene pÃ¥ en gang.
+		 * Kjappere Ã¥ debugge levels slik det er nÃ¥.
 		 */
 		do {
 			t.nextToken();
@@ -267,7 +267,7 @@ public class LevelLoader extends Thread {
 
 	/**
 	 * Legger til et objekt i <CODE>_objectMap</CODE>
-	 * @param ticks Når objektet skal dukke opp i spillet
+	 * @param ticks NÃ¥r objektet skal dukke opp i spillet
 	 * @param object Selve objektet
 	 */
 	private void addObject(int ticks, GameObject object ){
@@ -286,8 +286,8 @@ public class LevelLoader extends Thread {
 	/**
 	 * Legger til objekter i <CODE>_objectMap</CODE> ved hjelp av
 	 * {@link #addObject(int, GameObject)}
-	 * @param name Navnet på objektet
-	 * @param params Inneholder 5 elementer. Antall, Når den første dukker opp,
+	 * @param name Navnet pÃ¥ objektet
+	 * @param params Inneholder 5 elementer. Antall, NÃ¥r den fÃ¸rste dukker opp,
 	 *               hvor lenge det blir mellom hver, x-posisjon og y-posisjon.
 	 * @param line Linjenummer. Brukes i feilmeldinger.
 	 */
@@ -337,7 +337,7 @@ public class LevelLoader extends Thread {
 
 	/**
 	 * Lager et objekt som tilsvarer navnet i <code>name</code>
-	 * @param name Navnet på objektet som skal lages
+	 * @param name Navnet pÃ¥ objektet som skal lages
 	 * @param posX X-koordinaten til det nye objektet
 	 * @param posY Y-koordinaten til det nye objektet
 	 * @param options Options til fienden

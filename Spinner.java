@@ -1,4 +1,4 @@
-/** Rask skip som går rett frem
+/** Rask skip som gÃ¥r rett frem
  *
  * @author J&oslash;rgen Braseth (jorgebr@stud.ntnu.no)
  */
@@ -15,7 +15,7 @@ public class Spinner extends EnemyObject  {
 
     /**
      * Skyter om tiden er inne for det.
-     * Høyere level Spinner skyter oftere
+     * HÃ¸yere level Spinner skyter oftere
      */
 	public void action() {
 		if(_age%(50/_option)==0)
@@ -41,7 +41,7 @@ public class Spinner extends EnemyObject  {
 			int xdist = (_target.x - x);
 			int ydist = (_target.y - y);
 
-			// Beregn enhetsvektor (retning man bør bevege seg i)
+			// Beregn enhetsvektor (retning man bÃ¸r bevege seg i)
 			float xa = (float)(xdist / (double)Math.abs(xdist));
 			float ya = (float)(ydist / (double)Math.abs(ydist));
 			float shotSpeedX = (int)(xa * 5*_option);

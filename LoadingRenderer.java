@@ -3,7 +3,7 @@ import java.awt.event.KeyEvent;
 
 /**
  * Denne klassen er en renderer for loading screenen.
- * Vil quitte på any key.
+ * Vil quitte pÃ¥ any key.
  * @author Erik Axel Nielsen (erikaxel@stud.ntnu.no)
  */
 
@@ -12,8 +12,8 @@ public class LoadingRenderer extends TextRenderer {
     private MenuOption subText;
 
 	/**
-	 * Konstruktørern.
-	 * @param screen Skjermen som loadingen skal tegnes på.
+	 * KonstruktÃ¸rern.
+	 * @param screen Skjermen som loadingen skal tegnes pÃ¥.
 	 */
 	public LoadingRenderer( Screen screen ) {
 		super( screen.getCurrentResolution() );
@@ -22,9 +22,9 @@ public class LoadingRenderer extends TextRenderer {
 	}
 
 	/**
-	 * Setter en ganske stor tekst midt på skjermen.
+	 * Setter en ganske stor tekst midt pÃ¥ skjermen.
 	 * Blir tegnet i sinuskurver.
-	 * @param text Teksten som skal stå på skjermen
+	 * @param text Teksten som skal stÃ¥ pÃ¥ skjermen
 	 */
 	public void setLoadingText (String text) {
 		loadingText = new MenuOption( text, 0 );
@@ -32,8 +32,8 @@ public class LoadingRenderer extends TextRenderer {
 
 	/**
 	 * Setter en undertekst.
-	 * Står stille.
-	 * @param text Teksten som skal stå på skjermen
+	 * StÃ¥r stille.
+	 * @param text Teksten som skal stÃ¥ pÃ¥ skjermen
 	 */
     public void setSubText( String text ) {
 	    subText = new MenuOption( text, 0 );

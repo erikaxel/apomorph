@@ -1,19 +1,19 @@
 /** 
- * Überbeam weapon
+ * Ãœberbeam weapon
  *
- * @author Jørgen Braseth <jorgebr@stud.ntnu.no>
+ * @author JÃ¸rgen Braseth <jorgebr@stud.ntnu.no>
  * @see GameObject
  */
 
 public class UberBeam extends PlayerShot {
 
-	/** Bestemmer om strålen er på.*/
+	/** Bestemmer om strÃ¥len er pÃ¥.*/
 	public boolean beamOn;
 	private java.applet.AudioClip sound;	
 	/** Konstruktor 
 	 *
 	 *@param gr GameRenderer som objektet tegnes til
-	 *@param owner Spillern som styrer våpenet
+	 *@param owner Spillern som styrer vÃ¥penet
 	 */
 	public UberBeam( GameRenderer gr,Player owner) {
 		super( gr, "uberbeam", owner, 0, 0, 0 );
@@ -24,8 +24,8 @@ public class UberBeam extends PlayerShot {
 	}
 	
 	/**
-	 *Utfører steget.
-	 *Flytter med skipet om på, fjernes fra render-loopen om av
+	 *UtfÃ¸rer steget.
+	 *Flytter med skipet om pÃ¥, fjernes fra render-loopen om av
 	 */
 	public void action() {
 		
@@ -40,7 +40,7 @@ public class UberBeam extends PlayerShot {
 	}
 	
 	/**
-	 *Skrur våpenet av eller på
+	 *Skrur vÃ¥penet av eller pÃ¥
 	 */
 	public void toggle() {
 		Log.log("beam toggled");

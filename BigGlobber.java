@@ -1,14 +1,14 @@
 /** BigGlobber Enemy.
  *
  *	Pattern-monster
- *	Beveger seg fremover for så å fare bakover og etterlate et sport med fallende skudd.
- *  Denne ersjonen går aldri ut av bildet. Levelboss-mulighet
+ *	Beveger seg fremover for sÃ¥ Ã¥ fare bakover og etterlate et sport med fallende skudd.
+ *  Denne ersjonen gÃ¥r aldri ut av bildet. Levelboss-mulighet
  *
  * @author J&oslash;rgen Braseth (jorgebr@stud.ntnu.no)
  */
 
 public class BigGlobber extends EnemyObject  {
-	private int BehaveState; //type oppførsel
+	private int BehaveState; //type oppfÃ¸rsel
 	private int startX;
 	public BigGlobber( GameRenderer gr, Integer x, Integer y, Integer option) {
 		super( gr, "bigglobber"+option.intValue(), x, y, option, 100*(option.intValue()*option.intValue()), 1000*option.intValue() );
@@ -17,11 +17,11 @@ public class BigGlobber extends EnemyObject  {
 		_damage = 1*_option;
 	}
     /**
-     * Gjør et steg av hva det nå måtte være
+     * GjÃ¸r et steg av hva det nÃ¥ mÃ¥tte vÃ¦re
      */
 	public void action() {
 
-		if (BehaveState == 0) { //inn på bildet
+		if (BehaveState == 0) { //inn pÃ¥ bildet
 			_xSpeed=-10;
 			_ySpeed = (float)(Math.sin(((double)_age/10)*Math.PI)*2);
 			if (x<=startX) {

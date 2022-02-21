@@ -2,14 +2,14 @@
  * ForceField
  *
  * @see GameObject
- * @author Jørgen Braseth <jorgebr@stud.ntnu.no>
+ * @author JÃ¸rgen Braseth <jorgebr@stud.ntnu.no>
  */
 
 import java.awt.*;
 import java.awt.image.*;
 
 public class ForceField extends PlayerShot {
-	/** Viser om forcefield er på */
+	/** Viser om forcefield er pÃ¥ */
 	public boolean fieldOn;
 
 	/**
@@ -28,8 +28,8 @@ public class ForceField extends PlayerShot {
 	}
 
 	/**
-	 *Utfører steget.
-	 *Flytter med skipet om på, fjernes fra render-loopen om av
+	 *UtfÃ¸rer steget.
+	 *Flytter med skipet om pÃ¥, fjernes fra render-loopen om av
 	 */
 	public void action() {
 		if ((_owner.forceAmmo<=0)||(fieldOn==false)) {
@@ -42,7 +42,7 @@ public class ForceField extends PlayerShot {
 	}
 
 	/**
-	 *Skrur forcefield av eller på
+	 *Skrur forcefield av eller pÃ¥
 	 */
 	public void toggle() {
 		if (fieldOn) {

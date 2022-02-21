@@ -1,5 +1,5 @@
 /** Overklasse for fienders skudd
- * @author Egil Sørensen (egil@stud.ntnu.no), J&oslash;rgen Braseth (jorgebr@stud.ntnu.no)
+ * @author Egil SÃ¸rensen (egil@stud.ntnu.no), J&oslash;rgen Braseth (jorgebr@stud.ntnu.no)
  */
 abstract public class EnemyShot extends GameObject {
 	protected int option;

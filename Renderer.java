@@ -13,7 +13,7 @@ public abstract class Renderer implements KeyListener {
 	protected int _height, _width;
 
 	/**
-	 * Konstruktør
+	 * KonstruktÃ¸r
 	 * @param resolution resolusjonen vi er i.
 	 */
 	public Renderer( DisplayMode resolution ) {
@@ -23,8 +23,8 @@ public abstract class Renderer implements KeyListener {
 	}
 
 	/**
-	 * render skal være loopen i rendermaskinen.
-	 * @param g Graphic å tegne på.
+	 * render skal vÃ¦re loopen i rendermaskinen.
+	 * @param g Graphic Ã¥ tegne pÃ¥.
 	 */
  	public abstract void render( Graphics2D g );
 
@@ -35,16 +35,16 @@ public abstract class Renderer implements KeyListener {
 
 
 	/**
-	 * Returnerer høyden på modusen vi er i.
-	 * @return Høyden på oppløsningen
+	 * Returnerer hÃ¸yden pÃ¥ modusen vi er i.
+	 * @return HÃ¸yden pÃ¥ opplÃ¸sningen
 	 */
 	public int getHeight() {
 		return _height;
 	}
 
 	/**
-	 * Returnerer bredden på modusen vi er i.
-	 * @return Bredden på oppløsningen.
+	 * Returnerer bredden pÃ¥ modusen vi er i.
+	 * @return Bredden pÃ¥ opplÃ¸sningen.
 	 */
 	public int getWidth() {
 		return _width;

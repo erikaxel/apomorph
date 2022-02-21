@@ -1,9 +1,9 @@
 /** Glowholder Enemy.
  *
  *	Manetliknende fiende
- *	Gør i sinus-kurve i x-retningen
+ *	GÃ¸r i sinus-kurve i x-retningen
  *
- * @author Jørgen Braseth (jorgebr@stud.ntnu.no)
+ * @author JÃ¸rgen Braseth (jorgebr@stud.ntnu.no)
  */
 
 class GHolder extends EnemyObject  {
@@ -12,7 +12,7 @@ class GHolder extends EnemyObject  {
 		_damage = 1;
 	}
     /**
-     * Alt det denne fienden gjør er å bevege seg i sinuskurver i x-retningen over skjermen.
+     * Alt det denne fienden gjÃ¸r er Ã¥ bevege seg i sinuskurver i x-retningen over skjermen.
      */
 	public void action() {
 	    _xSpeed = (int)(Math.sin(((double)_age/15)*Math.PI)*5)-5;

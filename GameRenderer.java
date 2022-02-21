@@ -5,8 +5,8 @@ import java.util.*;
 
 /**
  * Denne klassen er selve motoren i spillet.
- * Har oversikt over alle objektene i forskjellige lag, og ber dem om å flytte og tegne seg selv.
- * @author Erik Axel Nielsen (erikaxel@stud.ntnu.no), Egil Sørensen (egil@stud.ntnu.no)
+ * Har oversikt over alle objektene i forskjellige lag, og ber dem om Ã¥ flytte og tegne seg selv.
+ * @author Erik Axel Nielsen (erikaxel@stud.ntnu.no), Egil SÃ¸rensen (egil@stud.ntnu.no)
  */
 
 public class GameRenderer extends Renderer implements KeyListener {
@@ -16,11 +16,11 @@ public class GameRenderer extends Renderer implements KeyListener {
 	 * Lag 1, er vennlig, dvs Skip + skips-skudd, kan kollidere med lag 2.
 	 * Lag 2, er fiende, dvs Fiende, fiende-skudd, kan kollidere med lag 1.
 	 * Lag 3, er powerups, kan kollidere med lag 1
-	 * Objekt som ligger i høyere lag vil gjemme de under.
+	 * Objekt som ligger i hÃ¸yere lag vil gjemme de under.
 	 */
 	public LinkedList[] layers;
 
-	/* For å unngå "magiske" variabler, defineres lagbetydningene som statiske variabler */
+	/* For Ã¥ unngÃ¥ "magiske" variabler, defineres lagbetydningene som statiske variabler */
 	/** Bakgrunnslaget */
 	final static public int LAYER_BACKGROUND = 0;
     /** Eksplosjonslaget */
@@ -85,7 +85,7 @@ public class GameRenderer extends Renderer implements KeyListener {
 
 	/**
 	 * Overridet fra baseklassen.
-	 * Dette er spillets main-loop, kjører action() og draw() på alle objektene.
+	 * Dette er spillets main-loop, kjÃ¸rer action() og draw() pÃ¥ alle objektene.
 	 */
     public void render(Graphics2D g) {
 		//Log.log( "Time since last check: " + highResTimer.timeElapsed() );
@@ -99,7 +99,7 @@ public class GameRenderer extends Renderer implements KeyListener {
 
 		g.setColor( Color.black );
 
-		// Vi må cleare bildet før vi gjør noe som helst annet:
+		// Vi mÃ¥ cleare bildet fÃ¸r vi gjÃ¸r noe som helst annet:
 		if( _isFullScreen ) {
 			g.clearRect( 0,0, _width, _height + 50);
 
@@ -137,7 +137,7 @@ public class GameRenderer extends Renderer implements KeyListener {
 				GameObject o = (GameObject)iter.next();
 				o.doAction();  // flytt, skyt osv
 				o.draw( g );   // tegn objektet
-				// Sjekk om vi er langt utenfor skjermen, isåfall, fjern objektet:
+				// Sjekk om vi er langt utenfor skjermen, isÃ¥fall, fjern objektet:
 				if (o.x < -200 || o.x > (_width + 200)  || o.y < -200) {
 				     removeObject(o);
 				}
@@ -147,7 +147,7 @@ public class GameRenderer extends Renderer implements KeyListener {
         bgf.addBackgroundObject();
 		testCollide();
 
-		// Skrive fps'en øverst til venstre i skjermen:
+		// Skrive fps'en Ã¸verst til venstre i skjermen:
 		if( _showFPS ) {
 			printFPS( 1 / _fpsTimer.timeElapsed(), g, false );
 		}
@@ -156,7 +156,7 @@ public class GameRenderer extends Renderer implements KeyListener {
 			_clearFps = false;
 		}
  		// Sjekk om levelet er ferdig.
-		// Levelet er ferdig når det er tomt for fiender både i levelet og på skjermen.
+		// Levelet er ferdig nÃ¥r det er tomt for fiender bÃ¥de i levelet og pÃ¥ skjermen.
 		if ( _level.empty() && (layers[LAYER_ENEMY].size() == 0 && layers[LAYER_POWERUP].size() == 0)) {
 			levelDone();
 		}
@@ -189,7 +189,7 @@ public class GameRenderer extends Renderer implements KeyListener {
 
 	/**
 	 * Tester om objekter fra layer 2 (fiender), "krasjer" med skudd eller skipet
-	 * Kjører i såfall collide() metoden på begge to
+	 * KjÃ¸rer i sÃ¥fall collide() metoden pÃ¥ begge to
 	 */
 	private void testCollide() {
 		checkOneCollide( LAYER_PLAYER );
@@ -302,7 +302,7 @@ public class GameRenderer extends Renderer implements KeyListener {
 	}
 
 	/**
-	 * Sjekke hvilke objekter vi har igjen på skjermen. Kun for debug.
+	 * Sjekke hvilke objekter vi har igjen pÃ¥ skjermen. Kun for debug.
 	 */
 	public void printObjects() {
 		HashMap objects = new HashMap();

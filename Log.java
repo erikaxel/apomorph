@@ -8,16 +8,16 @@ import java.awt.*;
 import java.awt.event.*;
 
 /**
- * Et objekt som skal kunne returnere feilmeldinger på
+ * Et objekt som skal kunne returnere feilmeldinger pÃ¥
  * skjerm eller evt skrive dem til egen logg-fil alt
  * etter hva verdiene i boolean[] level er satt til
  * hvor 0 = skjerm, 1 = fil, 2 = messagebox
- * @author 	Egil Sørensen (egil@stud.ntnu.no)
+ * @author 	Egil SÃ¸rensen (egil@stud.ntnu.no)
  */
 
 public abstract class Log {
 	//Setter default verdi slik at det skrives til fil dersom ingenting annet oppgis
-	//ved kjøring av setValue()
+	//ved kjÃ¸ring av setValue()
 
 	private static boolean[] logLevel = {false, false, false};
     private static boolean[] errorLevel = {false, false, false};
@@ -28,7 +28,7 @@ public abstract class Log {
 
 
     /**
-     * Setter log-levelen (hva loggen skal gjøre egentlig)
+     * Setter log-levelen (hva loggen skal gjÃ¸re egentlig)
      * @param level
      */
 
@@ -103,7 +103,7 @@ public abstract class Log {
     }
 
     /**
-     * Setter error-levelen (hva error skal gjøre egentlig)
+     * Setter error-levelen (hva error skal gjÃ¸re egentlig)
      *
      *
      * @param level
@@ -187,7 +187,7 @@ public abstract class Log {
 
 
     /**
-     * Skrur logging til skjerm av/på
+     * Skrur logging til skjerm av/pÃ¥
      * @param value
      * @param level
      */
@@ -198,7 +198,7 @@ public abstract class Log {
 
 
     /**
-     * Skrur logging til fil av/på
+     * Skrur logging til fil av/pÃ¥
      * @param value
      * @param level
      */
@@ -208,7 +208,7 @@ public abstract class Log {
     }
 
     /**
-     *  Skrur logging til MsgBox av/på
+     *  Skrur logging til MsgBox av/pÃ¥
      * @param value
      * @param level
      */
@@ -240,7 +240,7 @@ public abstract class Log {
 
 
     /** Benyttes av error(String element) og log(String element)
-     *  til å skrive loggen. Har med så jeg slipper skrive alt to ganger
+     *  til Ã¥ skrive loggen. Har med sÃ¥ jeg slipper skrive alt to ganger
      * @param element
      * @param filename
      */
@@ -257,7 +257,7 @@ public abstract class Log {
             try {
 			FileWriter file = new FileWriter(filename,true);
 			PrintWriter writer = new PrintWriter(file);
-			//Lager standard dato-format og kalender objekt for å kunne
+			//Lager standard dato-format og kalender objekt for Ã¥ kunne
 			//legg til timestamp til loggen
 			GregorianCalendar cal = new GregorianCalendar();
 			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy - HH:mm:ss");

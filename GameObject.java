@@ -1,26 +1,26 @@
 import java.awt.*;
 
-/** En abstrakt klasse. Representerer et objekt som skal på skjermen.
- *  Kan være skipet, monstre eller powerups.
+/** En abstrakt klasse. Representerer et objekt som skal pÃ¥ skjermen.
+ *  Kan vÃ¦re skipet, monstre eller powerups.
  *	@author Erik Axel Nielsen (erikaxel@stud.ntnu.no)
- *	@author Jørgen Braseth (jorgebr@stud.ntnu.no)
+ *	@author JÃ¸rgen Braseth (jorgebr@stud.ntnu.no)
  */
 
 public abstract class GameObject {
 
 	public boolean dead;
 
-	/** x koordinatet på skjermen */
+	/** x koordinatet pÃ¥ skjermen */
 	public int x;
-	/** y koordinatet på skjermen */
+	/** y koordinatet pÃ¥ skjermen */
 	public int y;
-	/** Bredde på objektet. Blir hentet fra bilde-størrelse */
+	/** Bredde pÃ¥ objektet. Blir hentet fra bilde-stÃ¸rrelse */
 	public int width;
-	/** Høyde på objektet. Blir hentet fra bilde-størrelse */
-	public int height; // kanskje burde være private??
-	/** Hvor lenge objektet har vært på skjermen. */
+	/** HÃ¸yde pÃ¥ objektet. Blir hentet fra bilde-stÃ¸rrelse */
+	public int height; // kanskje burde vÃ¦re private??
+	/** Hvor lenge objektet har vÃ¦rt pÃ¥ skjermen. */
 	protected int _age;
-	/** Laget objektet er i. Må spesifiseres av subklasser. */
+	/** Laget objektet er i. MÃ¥ spesifiseres av subklasser. */
 	protected int _layer = 0;
 	/** Helsen til objektet */
 	protected int _health;
@@ -33,11 +33,11 @@ public abstract class GameObject {
 	/** Hastigheten i x-retning */
 	protected float _xSpeed;
 	/** GameRenderen som eier objektet. */
-	protected Image[] _movie; // kan også bare være ett bilde.
+	protected Image[] _movie; // kan ogsÃ¥ bare vÃ¦re ett bilde.
 	protected GameRenderer _gameRenderer;
 	private String _name;
 	/**
-	 * Konstruktør.
+	 * KonstruktÃ¸r.
 	 * @param gameRenderer GameRendereren som eier objektet.
 	 * @param name Navnet til objektet. Blir default brukt som bildebasenavn
 	 */
@@ -67,8 +67,8 @@ public abstract class GameObject {
 	    return _layer;
     }
 	/**
-	 * Tegner seg selv på skjermen.
-	 * @param g Graphics objekt å tegne på.
+	 * Tegner seg selv pÃ¥ skjermen.
+	 * @param g Graphics objekt Ã¥ tegne pÃ¥.
 	 */
 	public void draw(Graphics2D g) {
 		int whichOne = _age % _movie.length;
@@ -76,24 +76,24 @@ public abstract class GameObject {
 	}
 
 	/**
-	 * Denne vil bli kalt like før objektet blir tegnet.
-	 * Underklasser bør gjøre ting som flytting, skyting o.l i denne metoden.
+	 * Denne vil bli kalt like fÃ¸r objektet blir tegnet.
+	 * Underklasser bÃ¸r gjÃ¸re ting som flytting, skyting o.l i denne metoden.
 	 */
 	abstract protected void action();
 
 	/**
-	 * Denne kalles av renderloopen. Sørger for at action() blir kalt.
+	 * Denne kalles av renderloopen. SÃ¸rger for at action() blir kalt.
 	 */
 	public void doAction() {
 		_age++;
-		if( _age == 200 ) { // Todo: denne burde ikke være her. Men det går så JÆVLIG fort nå...
+		if( _age == 200 ) { // Todo: denne burde ikke vÃ¦re her. Men det gÃ¥r sÃ¥ JÃ†VLIG fort nÃ¥...
 			_age = 0;
 		}
 		action();
 
 		x += _xSpeed;
 		y += _ySpeed;
-		// Hvis vi går utenfor skjermen, håndter det!
+		// Hvis vi gÃ¥r utenfor skjermen, hÃ¥ndter det!
 		if( y + height > _gameRenderer.getHeight() || y < 0 ||
 		    x + width > _gameRenderer.getWidth() || x < 0 ) {
 				outOfScreenAction();
@@ -108,7 +108,7 @@ public abstract class GameObject {
 	}
 
 	/**
-	 * Skal bli kalt når objektet skal dø, fjernes eller noe slikt...
+	 * Skal bli kalt nÃ¥r objektet skal dÃ¸, fjernes eller noe slikt...
 	 */
 
 	public void die() {
@@ -130,9 +130,9 @@ public abstract class GameObject {
 	}
 
 	/**
-	 * Denne metoden blir kalt når man merker at man er utenfor skjermen.
-	 * Objekter dør vanligvis hvis de er utenfor skjermen.
-	 * Subklasser må override hvis de skal ha egen oppførsel.
+	 * Denne metoden blir kalt nÃ¥r man merker at man er utenfor skjermen.
+	 * Objekter dÃ¸r vanligvis hvis de er utenfor skjermen.
+	 * Subklasser mÃ¥ override hvis de skal ha egen oppfÃ¸rsel.
 	 */
 	public void outOfScreenAction() {
 		die();
